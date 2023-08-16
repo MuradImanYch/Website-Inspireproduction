@@ -1,0 +1,189 @@
+.introWrap {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: space-between;
+}
+.introWrap .item {
+    width: 100%;
+    height: 40%;
+    cursor: pointer;
+}
+.introWrap .item:first-child {
+    background: url('/images/intro/edit.png') no-repeat top/cover;
+}
+.introWrap .item:nth-child(2) {
+    background: url('/images/intro/production.png') no-repeat center/cover;
+}
+.introWrap .item:last-child {
+    background: url('/images/intro/creation.png') no-repeat bottom/cover;
+}
+.introWrap .item .wrap {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+}
+.introWrap .item .wrap .text p {
+    color: rgba(255, 255, 255, 0.4);
+    letter-spacing: 0.04em;
+    font-size: 32px;
+    line-height: 48px;
+    font-family: Inter-Light;
+}
+.introWrap .item:hover .wrap {
+    background: transparent;
+}
+.introWrap .item .wrap .text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.introWrap .item .wrap .text img {
+    width: 130px;
+    margin: -150px 0 0 0;
+    display: none;
+}
+.introWrap .item:first-child:hover .wrap .text p {
+    color: #FF0000;
+    transition: 0.12s;
+    animation: textEdit linear 0.12s;
+}
+@keyframes textEdit {
+    from {
+        margin: 0 0 0 -100px;
+    }
+    to {
+        margin: 0;
+    }
+}
+.introWrap .item:first-child:hover .wrap .text img {
+    display: block;
+}
+
+.introWrap .item:nth-child(2):hover .wrap .text p {
+    width: 100%;
+}
+.introWrap .item:nth-child(2):hover .wrap .text p {
+    color: #fff;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -5%);
+    animation: productionText linear 0.12s;
+    
+}
+.introWrap .item:nth-child(2):hover .wrap .text img {
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-14.5%, -42%);
+    animation: productionImg linear 0.12s;
+}
+@keyframes productionText {
+    from {
+        transform: translate(-50%, -35%);
+    }
+    to {
+        transform: translate(-50%, -5%);
+    }
+}
+@keyframes productionImg {
+    from {
+        transform: translate(-50%, -35%);
+    }
+    to {
+        transform: translate(-14.5%, -42%);
+    }
+}
+
+.introWrap .item:nth-child(3):hover .wrap .text p {
+    width: 100%;
+}
+.introWrap .item:nth-child(3):hover .wrap {
+    position: relative;
+}
+.introWrap .item:nth-child(3):hover .wrap .text p {
+    color: #FF0000;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -5%);
+    animation: creationText linear 0.12s;
+}
+.introWrap .item:nth-child(3):hover .wrap .text img {
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-37%, -42%);
+    animation: creationImg linear 0.12s;
+}
+@keyframes creationText {
+    from {
+        transform: translate(-50%, -35%);
+    }
+    to {
+        transform: translate(-50%, -5%);
+    }
+}
+@keyframes creationImg {
+    from {
+        transform: translate(-50%, -35%);
+    }
+    to {
+        transform: translate(-37%, -42%);
+    }
+}
+
+@media(min-width: 1024px) {
+    .introWrap {
+        justify-content: space-between;
+        flex-direction: row;
+    }
+    .introWrap .item {
+        width: 40%;
+        height: 100vh;
+    }
+    .introWrap .item:hover .wrap {
+        width: 100%;
+    }
+    .introWrap .item .wrap .text p {
+        font-size: 48px;
+    }
+    .introWrap .item:hover {
+        min-width: 40%;
+    }
+    .introWrap .item .wrap .text img {
+        width: 180px;
+        margin: -210px 0 0 0;
+    }
+    .introWrap .item:nth-child(2):hover .wrap .text img {
+        transform: translate(-11.5%, -42%);
+    }
+    @keyframes productionImg {
+        from {
+            transform: translate(-50%, -35%);
+        }
+        to {
+            transform: translate(-11.5%, -42%);
+        }
+    }
+
+    .introWrap .item:nth-child(3):hover .wrap .text img {
+        transform: translate(-35%, -42%);
+    }
+    @keyframes creationImg {
+        from {
+            transform: translate(-50%, -35%);
+        }
+        to {
+            transform: translate(-35%, -42%);
+        }
+    }
+}

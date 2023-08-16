@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+    />
+    <!-- =================== -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- A bit of SEO -->
+    <title>INSPIRE.EDIT</title>
+    <meta
+      name="keywords"
+      content="Написание сценария / режиссерского тритмента (создание идеи с нуля) - режиссер"
+    />
+    <meta
+      name="description"
+      content="Студия постпродакшена"
+    />
+    <!-- =================== -->
+
+    <link rel="stylesheet" href="./style/style.css" />
+    <link rel="stylesheet" href="./style/blocks/edit.css" />
+</head>
+<body class="edit">
+  <!-- order-form -->
+  <div class="form-conteiner" id="form">
+    <div class="form">
+      <iframe
+        name="dummyframe"
+        id="dummyframe"
+        style="display: none"
+      ></iframe>
+      <form
+        action="./php/telegram.php"
+        method="POST"
+        class="form-contact"
+        id="app-form-1"
+        autocomplete="off"
+        novalidate
+        target="dummyframe"
+      >
+        <div class="modal" id="formModal">
+          <button type="button" class="form__close-btn" id="buttonCloseModal">
+            <img
+              width="92"
+              height="78"
+              class="form-close ev-none"
+              src="./images/closeBurgerMenu.png"
+              alt="закрыть"
+            />
+          </button>
+          <div class="form__message" id="form__message"></div>
+        </div>
+
+        <h3 class="heading-h3">ЗАПОЛНИТЕ ФОРМУ</h3>
+
+        <div class="contact-form__content-wrapper">
+          <div
+            class="contact-form__input-wrapper contact-form__input-wrapper_name"
+          >
+            <input
+              id="username"
+              name="username"
+              type="text"
+              class="contact-form__input contact-form__input_name"
+              placeholder="Имя"
+            />
+          </div>
+
+          <div
+            class="contact-form__input-wrapper contact-form__input-wrapper_phone"
+          >
+            <input
+              id="userphone"
+              name="userphone"
+              type="text"
+              class="contact-form__input contact-form__input_phone"
+              placeholder="Телефон"
+            />
+          </div>
+
+          <div
+            class="contact-form__input-wrapper contact-form__input-wrapper_phone"
+          >
+            <textarea
+              id="usertext"
+              name="usertext"
+              type="text"
+              class="contact-form__input contact-form__input_text"
+              placeholder="Несколько слов о проекте"
+              cols="40"
+              rows="5"
+            ></textarea>
+          </div>
+
+          <input name="theme" type="hidden" value="Заявка с 'EDIT'" />
+
+          <button
+            class="contact-form__button order-btn_right btn__hoverbutton-sectionSendApplication button-order"
+            id="form-button-1"
+            type="submit"
+          >
+            <span class="btn-underline btn">ЗАКАЗАТЬ ВИДЕОРОЛИК</span>
+          </button>
+
+          <p class="form-contact__politics">
+            Нажимая на&nbsp;эту кнопку, вы&nbsp;соглашаетесь <br />
+            <a href="privacy" class="form-contact__politics-link">
+              с&nbsp;<u>политикой конфиденциальности</u>
+            </a>
+          </p>
+        </div>
+      </form>
+    </div>
+  </div>
+  <!-- /.form -->
+    <header class="header">
+        <div class="header__videoBG video-container">
+          <!-- <img
+            class="header__imgBG"
+            src="./video/videoBG-header/mainBGFull.gif"
+            alt="background"
+          /> -->
+  
+          <video
+            class="video"
+            preload="auto"
+            autoplay
+            loop
+            muted="muted"
+            playsinline
+          >
+            <source
+              src="./video/videoBG-header/mainBGFull.webm"
+              type="video/webm"
+            />
+            <source
+              src="./video/videoBG-header/mainBGFull.mp4"
+              type="video/mp4"
+            />
+          </video>
+        </div>
+  
+        <!-- Меню-бургер -->
+        <div class="header__menu" id="menuPopup">
+          <nav class="menu__body">
+            <ul class="menu__list">
+              <li class="menu__item">
+                <div class="burger-menu-close" id="closeButton">
+                  <img
+                    class="close-btn"
+                    src="./images/closeBurgerMenu.png"
+                    alt="close"
+                    width="92"
+                    height="78"
+                    clas
+                  />
+                </div>
+              </li>
+              <li class="menu__item">
+                <ul>
+                  <li class="menu__main-link">
+                    <a class="btn-underline" href="production.html">PRODUCTION</a>
+                  </li>
+                  <li class="menu__main-link">
+                    <a class="btn-underline" href="creation.html">CREATION</a>
+                  </li>
+                </ul>
+              </li>
+  
+              <li class="menu__item">
+                <ul>
+                  <li class="menu__contact-link">
+                    <a
+                      target="_blank"
+                      href="mailto:hello@inspireproduction.ru?subject=Обращение оформленное через сайт: inspireprod.ru"
+                      class="burger__mail btn-underline"
+                      >hello@inspireproduction.ru</a
+                    >
+                  </li>
+                  <li class="menu__contact-link">
+                    <a class="burger__phone btn-underline" href="tel:+79035568985"
+                      >+7 903 556 89 85</a
+                    >
+                  </li>
+  
+                  <li class="menu__item">
+                    <ul class="menu__social-links">
+                      <li class="menu__social-link">
+                        <a href="https://t.me/korhz_a" target="_blank"
+                          ><img
+                            width="28"
+                            height="28"
+                            src="./images/icons/social-networks/tg-white.png"
+                            alt="Телеграм"
+                        /></a>
+                      </li>
+                      <li class="menu__social-link">
+                        <a href="https://wa.me/79035568985" target="_blank"
+                          ><img
+                            width="28"
+                            height="28"
+                            src="./images/icons/social-networks/wats-white.png"
+                            alt="Ватсап"
+                        /></a>
+                      </li>
+                      <li class="menu__social-link">
+                        <a href="https://vimeo.com/user164857469" target="_blank"
+                          ><img
+                            width="28"
+                            height="28"
+                            src="./images/icons/social-networks/vimeo-white.png"
+                            alt="Вимео"
+                        /></a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <!-- burger -->
+        <div class="header__container">
+          <div class="header__top" id="header">
+            <div>
+              <a class="editText">EDIT</a>
+              <a class="editImg">
+                <img
+                  width="200"
+                  height="auto"
+                  src="./images/editLogo.png"
+                  alt="INSPIRE.EDIT-logo"
+                  class="logo ev-none header__logo"
+                />
+              </a>
+            </div>
+            <div onclick="setTimeout(function(){ window.location.href='/production.html'; }, 400)">
+              <a class="productionText">PRODUCTION</a>
+              <a class="productionImg">
+                <img
+                  width="300"
+                  height="74"
+                  src="./images/productionLogo.png"
+                  alt="INSPIRE.PRODUCTION-logo"
+                  class="logo ev-none header__logo"
+                />
+              </a>
+            </div>
+            <div>
+              <a class="creationText">CREATION</a>
+              <a class="creationImg">
+                <img
+                  width="250"
+                  height="auto"
+                  src="./images/creationLogo.png"
+                  alt="INSPIRE.CREATION"
+                  class="logo ev-none header__logo"
+                />
+              </a>
+            </div>
+  
+            <div class="burger-menu" id="openButton">
+              <span class="burger-menu-span"></span>
+            </div>
+  
+            <!-- --------------- -->
+          </div>
+  
+          <div class="header__inner">
+            <div class="header__content">
+              <h1 class="header__title">
+                Студия постпродакшена
+              </h1>
+              <div class="img"><img src="/images/edit/play.png" alt="play" /></div>
+              <a href="#header">
+                <button class="order-btn_left btn__hover" id="orderButton1">
+                  <span class="btn-underline btn">СВЯЗАТЬСЯ С НАМИ</span>
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <section class="projects">
+        <h2 class="projets__title">НАШИ УСЛУГИ</h2>
+        <div class="projects__inner">
+          <div class="item">
+            <img src="/images/edit/edit.png" alt="edit" />
+            <div class="text">
+              <p class="title">МОНТАЖ</p>
+              <p class="descr">Отбор материала, создание композиции, развертывание видео</p>
+            </div>
+          </div>
+          <div class="item">
+            <img src="/images/edit/animation.png" alt="animation" />
+            <div class="text">
+              <p class="title">АНИМАЦИЯ</p>
+              <p class="descr">Создание графики: моушен, инфо, художественная анимация, VFX</p>
+            </div>
+          </div>
+          <div class="item">
+            <img src="/images/edit/soundWaves.png" alt="soundWaves" />
+            <div class="text">
+              <p class="title">САУНД-ДИЗАЙН</p>
+              <p class="descr">Обработка, сведение и чистка звука (голоса), подбор музыки и звуковых эффектов</p>
+            </div>
+          </div>
+          <div class="item">
+            <img src="/images/edit/correction.png" alt="correction" />
+            <div class="text">
+              <p class="title">ЦВЕТОКОРРЕКЦИЯ</p>
+              <p class="descr">Базовая коррекция, стилизация (graiding), clean-up</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="projects benefits">
+        <h2 class="projets__title">ПРЕИМУЩЕСТВА</h2>
+        <div class="projects__inner">
+          <div class="wrap">
+            <div class="item">
+              <img src="/images/edit/heart.png" alt="heart" />
+              <p class="title">Индивидуальный подход</p>
+              <p class="descr">Учитываем все аспекты проекта и пожелания заказчика</p>
+            </div>
+            <div class="item">
+              <img src="/images/edit/speedometer.png" alt="speedometer" />
+              <p class="title">СКОРОСТЬ РАБОТЫ</p>
+              <p class="descr">Реализуем ваш проект в заданные сроки без ущерба качеству</p>
+            </div>
+            <div class="item">
+              <img src="/images/edit/group.png" alt="group" />
+              <p class="title">Профессиональная команда</p>
+              <p class="descr">Решаем задачи любого уровня сложности</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <a href="#header">
+        <button class="order-btn_left btn__hover" id="orderButton2">
+          <span class="btn-underline btn">СВЯЗАТЬСЯ С НАМИ</span>
+        </button>
+      </a>
+      <footer class="footer">
+        <div class="footer__wrapper">
+          <div class="footer__text">
+            <div class="copyright">
+                <p class="footer__name">INSPIRE.PRODUCTION</p>
+              <p class="footer__copy">&#169; 2023</p>
+              </div>
+              <ul>
+                  <li><a href="edit.html">EDIT</a></li>
+                  <li><a href="production.html">PRODUCTION</a></li>
+                  <li><a>CREATION</a></li>
+              </ul>
+          </div>
+  
+          <div class="footer__contacts-list">
+            <div class="footer__contacts">
+              <a
+                target="_blank"
+                href="hello@inspireproduction.ru?subject=Обращение оформленное через сайт: inspireprod.ru"
+                class="footer__mail btn-underline"
+                >hello@inspireproduction.ru</a
+              >
+              <a class="footer__phone btn-underline" href="tel:+79035568985"
+                >+7 903 556 89 85</a
+              >
+            </div>
+            <ul class="footer__contacts-links">
+              <li class="footer__contacts-link">
+                <a href="https://t.me/korhz_a" target="_blank"
+                  ><img
+                    class="footer__social-link"
+                    width="28"
+                    height="28"
+                    src="./images/icons/social-networks/tg-white/Telegram_icon.png"
+                    alt="Телеграм"
+                /></a>
+              </li>
+              <li class="footer__contacts-link">
+                <a href="https://wa.me/79035568985" target="_blank"
+                  ><img
+                    class="footer__social-link"
+                    width="28"
+                    height="28"
+                    src="./images/icons/social-networks/tg-white/Whatsap_icon.png"
+                    alt="Ватс ап"
+                /></a>
+              </li>
+              <li class="footer__contacts-link">
+                <a href="https://vimeo.com/user164857469" target="_blank"
+                  ><img
+                    class="footer__social-link"
+                    width="28"
+                    height="28"
+                    src="./images/icons/social-networks/tg-white/Vimeo_icon.png"
+                    alt="Вимео"
+                /></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </footer>
+
+      <script src="./app/main.js"></script>
+      <script src="./app/edit.js"></script>
+</body>
+</html>

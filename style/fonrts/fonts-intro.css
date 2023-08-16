@@ -1,0 +1,14 @@
+@font-face {
+    font-family: 'Intro';
+    src: local('Intro Light'), local('Intro-Light'),
+        url('Intro-Light.woff2') format('woff2'),
+        url('Intro-Light.woff') format('woff'),
+        url('Intro-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: Inter-Light;
+    font-display: swap;
+    src: url("./Inter-Light.ttf");
+}

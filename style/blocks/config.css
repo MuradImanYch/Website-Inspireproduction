@@ -1,0 +1,43 @@
+* {
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-weight: normal;
+  font-family: "Intro";
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Intro Light";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 117%;
+  background-color: #101010;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  color: #ffffff;
+  text-align: center;
+
+  overflow-x: hidden;
+}
+button {
+  cursor: pointer;
+}
+a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+ul,
+ol {
+  list-style-type: none;
+}
+.main {
+  width: 100vw;
+  margin: 0 auto;
+}
