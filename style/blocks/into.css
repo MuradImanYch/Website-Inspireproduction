@@ -10,13 +10,13 @@
     cursor: pointer;
 }
 .introWrap .item:first-child {
-    background: url('/images/intro/edit.png') no-repeat top/cover;
+    background: url('images/intro/edit.png') no-repeat top/cover;
 }
 .introWrap .item:nth-child(2) {
-    background: url('/images/intro/production.png') no-repeat center/cover;
+    background: url('images/intro/production.png') no-repeat center/cover;
 }
 .introWrap .item:last-child {
-    background: url('/images/intro/creation.png') no-repeat bottom/cover;
+    background: url('images/intro/creation.png') no-repeat bottom/cover;
 }
 .introWrap .item .wrap {
     width: 100%;

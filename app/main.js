@@ -41,7 +41,7 @@ videoGallery.addEventListener("click", (evt) => {
     popup.classList.add("video-opened");
     // openVideoPopup("https://www.youtube.com/embed/caFEioZRF4E")
     videoContent.innerHTML = `
-        <button class="closeVideoPA"><img src="./images/closeBurgerMenu.png" alt="close"></button>
+        <button class="closeVideoPA"><img src="images/closeBurgerMenu.png" alt="close"></button>
     <iframe class="content__video"  
 src="https://www.youtube.com/embed/Ng_NQsi9Ztw?autoplay=1&color=white"
 frameborder="0" allowfullscreen></iframe>`;
@@ -49,13 +49,13 @@ frameborder="0" allowfullscreen></iframe>`;
     popup.classList.add("video-opened");
 
     videoContent.innerHTML = `
-    <button class="closeVideoPA"><img src="./images/closeBurgerMenu.png" alt="close"></button>
+    <button class="closeVideoPA"><img src="images/closeBurgerMenu.png" alt="close"></button>
     <iframe  class="content__video" src="https://www.youtube.com/embed/JPy8CG9ejcA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`;
   } else if (evt.target.dataset.video === "3") {
     popup.classList.add("video-opened");
 
     videoContent.innerHTML = `
-    <button class="closeVideoPA"><img src="./images/closeBurgerMenu.png" alt="close"></button>
+    <button class="closeVideoPA"><img src="images/closeBurgerMenu.png" alt="close"></button>
     <iframe  class="content__video" src="https://www.youtube.com/embed/o5PHN1RCSb8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`;
   }
 });
